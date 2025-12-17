@@ -10,81 +10,46 @@ body {
     height: 100vh;
     background: #0f0019; /* Fondo oscuro púrpura */
     font-family: "Rajdhani", sans-serif;
-    text-transform: uppercase;
 }
 
-/* Contenedor del Panel (Estilo Futurista Exterior) */
+/* Contenedor del Panel (Estilo Futurista) */
 .social-panel {
-    position: relative; 
-    
-    width: 250px; /* Ancho ajustado para horizontal */
+    width: 190px;
     padding: 14px 20px;
     background: rgba(15, 0, 25, 0.9);
-    
-    /* Borde Exterior (Tu estilo original) */
     border: 2px solid #8b5cf6; 
     clip-path: polygon(0 0, 96% 0, 100% 15%, 100% 100%, 4% 100%, 0 85%);
     box-shadow: 0 0 20px rgba(160, 50, 255, 0.4);
-    
-    /* Disposición Horizontal */
     display: flex;
     align-items: center;
     gap: 12px;
-    
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
 }
-
-/* Efecto Hover */
-.social-panel:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 30px rgba(160, 50, 255, 0.6);
-}
-
-/* CAMBIO CLAVE: Marco Interior Angulado (El efecto de la imagen) */
-.social-panel::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    pointer-events: none; 
-    
-    /* Segundo Borde Interior */
-    border: 1px solid rgba(139, 92, 246, 0.7); 
-    clip-path: polygon(0 0, 96% 0, 100% 15%, 100% 100%, 4% 100%, 0 85%);
-    
-    /* Pequeño brillo interior */
-    box-shadow: inset 0 0 5px rgba(160, 50, 255, 0.2);
-}
-
 
 /* Contenedor del Icono */
 .social-icon {
-    width: 42px; 
-    height: 42px;
+    width: 36px;
+    height: 36px;
     border-radius: 6px;
-    background: transparent; 
+    background: linear-gradient(180deg, rgba(60, 0, 90, 0.35), rgba(40, 0, 70, 0.35));
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 /* Estilo para la imagen inyectada (Logo) */
 .social-icon img {
-    width: 40px; 
-    height: 40px;
-    object-fit: contain;
-    /* Manteniendo el efecto RGB para TikTok */
-    filter: drop-shadow(-1px 0 0 #00ffff) drop-shadow(1px 0 0 #ff0050);
+    width: 35px; /* Tamaño del logo dentro del contenedor */
+    height: 48px;
+    object-fit: contain; /* Asegura que la imagen se vea bien sin estirarse */
+    /* *** LÍNEA ELIMINADA: filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5)); *** */
 }
 
-/* Estilo del Nombre de Usuario (Más grande y brillante) */
+/* Estilo del Nombre de Usuario */
 .social-user {
-    font-size: 24px; 
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     color: #ffffff;
-    text-shadow: 0 0 12px rgba(180, 100, 255, 1);
+    text-shadow: 0 0 10px rgba(150, 80, 255, 0.9);
+    text-transform: uppercase;
 }
