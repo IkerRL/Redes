@@ -19,9 +19,6 @@ const iconBox = document.querySelector(".social-icon");
 const userText = document.querySelector(".social-user"); 
 let index = 0;
 
-/**
- * Muestra el logo y el texto con animación GSAP.
- */
 function showIcon(i) {
     iconBox.innerHTML = "";
     
@@ -42,19 +39,19 @@ function showIcon(i) {
     // 2. GESTIÓN DEL TEXTO (Rotación con Fade)
     gsap.to(userText, {
         opacity: 0,
-        y: 5,
+        x: 5, // Animación horizontal para el estilo horizontal
         duration: 0.2,
         onComplete: () => {
             userText.textContent = data.user;
             gsap.fromTo(
                 userText, 
-                { opacity: 0, y: -5 }, 
-                { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
+                { opacity: 0, x: -5 }, 
+                { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }
             );
         }
     });
     
-    // 3. ACTUALIZAR ENLACE CLICABLE (Añade el enlace como data attribute)
+    // 3. ACTUALIZAR ENLACE CLICABLE
     socialPanel.dataset.profileLink = data.profileLink;
 }
 
@@ -67,7 +64,6 @@ socialPanel.addEventListener('click', () => {
 });
 
 
-// Muestra el primer elemento al cargar
 showIcon(index);
 
 // Configura la rotación automática cada 3 segundos (3000ms)
