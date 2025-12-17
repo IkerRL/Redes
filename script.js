@@ -1,4 +1,5 @@
 // Data: URLs de los logos e información a rotar
+// NOTA: Si necesitas que el nombre de usuario cambie, este array debe ser modificado.
 const socialData = [
     {
         name: "tiktok",
@@ -13,6 +14,10 @@ const socialData = [
 const iconBox = document.querySelector(".social-icon");
 let index = 0;
 
+/**
+ * Muestra el logo (<img>) correspondiente al índice proporcionado.
+ * @param {number} i - El índice del logo en el array socialData.
+ */
 function showIcon(i) {
     iconBox.innerHTML = "";
     
