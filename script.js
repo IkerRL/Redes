@@ -36,10 +36,10 @@ function showIcon(i) {
         { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }
     );
     
-    // 2. GESTIÓN DEL TEXTO (Rotación con Fade)
+    // 2. GESTIÓN DEL TEXTO (Rotación horizontal)
     gsap.to(userText, {
         opacity: 0,
-        x: 5, // Animación horizontal para el estilo horizontal
+        x: 5, 
         duration: 0.2,
         onComplete: () => {
             userText.textContent = data.user;
@@ -55,7 +55,7 @@ function showIcon(i) {
     socialPanel.dataset.profileLink = data.profileLink;
 }
 
-// FUNCIÓN CLICABLE (Abre el perfil actual)
+// FUNCIÓN CLICABLE
 socialPanel.addEventListener('click', () => {
     const link = socialPanel.dataset.profileLink;
     if (link) {
