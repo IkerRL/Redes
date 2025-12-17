@@ -1,20 +1,17 @@
-// Data: Incluye el logo, el nombre y el ENLACE de perfil
+// Data: Incluye el logo y el nombre. Ya NO incluye profileLink.
 const socialData = [
     {
         name: "tiktok",
-        url: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Tiktok_logo.png",
-        user: "MakacaGotica",
-        profileLink: "https://www.tiktok.com/@MakacaGotica" 
+        url: "https://img.freepik.com/vector-premium/logotipo-tik-tok_578229-290.jpg?semt=ais_hybrid&w=740&q=80",
+        user: "MakacaGotica"
     },
     {
         name: "instagram",
         url: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
-        user: "MakacaGoticaIG",
-        profileLink: "https://www.instagram.com/MakacaGoticaIG" 
+        user: "MakacaGotica"
     }
 ];
 
-const socialPanel = document.querySelector(".social-panel");
 const iconBox = document.querySelector(".social-icon");
 const userText = document.querySelector(".social-user"); 
 let index = 0;
@@ -51,17 +48,10 @@ function showIcon(i) {
         }
     });
     
-    // 3. ACTUALIZAR ENLACE CLICABLE
-    socialPanel.dataset.profileLink = data.profileLink;
+    // ELIMINADO: Actualización del data attribute de enlace
 }
 
-// FUNCIÓN CLICABLE
-socialPanel.addEventListener('click', () => {
-    const link = socialPanel.dataset.profileLink;
-    if (link) {
-        window.open(link, '_blank');
-    }
-});
+// ELIMINADO: eventListener para hacer el panel clicable
 
 
 showIcon(index);
