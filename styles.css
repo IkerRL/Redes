@@ -1,0 +1,56 @@
+/* Importar la fuente Rajdhani */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+
+/* Estilos Globales y Centrado */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0f0019; /* Fondo oscuro púrpura */
+    font-family: "Rajdhani", sans-serif;
+}
+
+/* Contenedor del Panel (Estilo Angular) */
+.social-panel {
+    width: 190px;
+    padding: 14px 20px;
+    background: rgba(15, 0, 25, 0.9);
+    border: 2px solid #8b5cf6; 
+    /* Estilo Angular */
+    clip-path: polygon(0 0, 96% 0, 100% 15%, 100% 100%, 4% 100%, 0 85%);
+    box-shadow: 0 0 20px rgba(160, 50, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Contenedor del Icono */
+.social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: linear-gradient(180deg, rgba(60, 0, 90, 0.35), rgba(40, 0, 70, 0.35));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; 
+}
+
+/* Estilo para la imagen inyectada (Logo) */
+.social-icon img {
+    /* CORRECCIÓN: Ajustamos el tamaño para que encaje bien en 36x36px */
+    width: 30px; 
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Estilo del Nombre de Usuario */
+.social-user {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(150, 80, 255, 0.9);
+    text-transform: uppercase;
+}
