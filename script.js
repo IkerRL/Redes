@@ -9,11 +9,17 @@ const socialData = [
         name: "instagram",
         url: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg",
         user: "MakacaGotica"
+    },
+    // *** NUEVA RED SOCIAL AÑADIDA ***
+    {
+        name: "youtube",
+        url: "https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282017%29.png", // URL del logo de YouTube
+        user: "MiCanalGenialYT" // Tu nombre de usuario o canal de YouTube
     }
 ];
 
 const iconBox = document.querySelector(".social-icon");
-const userText = document.querySelector(".social-user"); 
+const userText = document.querySelector(".social-user");
 let index = 0;
 
 function showIcon(i) {
@@ -23,35 +29,31 @@ function showIcon(i) {
     
     // 1. GESTIÓN DEL LOGO
     const logoImg = document.createElement('img');
-    logoImg.src = data.url; 
+    logoImg.src = data.url;
     logoImg.alt = `${data.name} logo`;
     iconBox.appendChild(logoImg);
 
     gsap.fromTo(
-        logoImg, 
-        { opacity: 0, scale: 0.8 }, 
+        logoImg,
+        { opacity: 0, scale: 0.8 },
         { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }
     );
     
     // 2. GESTIÓN DEL TEXTO (Rotación horizontal)
     gsap.to(userText, {
         opacity: 0,
-        x: 5, 
+        x: 5,
         duration: 0.2,
         onComplete: () => {
             userText.textContent = data.user;
             gsap.fromTo(
-                userText, 
-                { opacity: 0, x: -5 }, 
+                userText,
+                { opacity: 0, x: -5 },
                 { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }
             );
         }
     });
-    
-    // ELIMINADO: Actualización del data attribute de enlace
 }
-
-// ELIMINADO: eventListener para hacer el panel clicable
 
 
 showIcon(index);
