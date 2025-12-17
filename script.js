@@ -13,8 +13,8 @@ const socialData = [
     // *** NUEVA RED SOCIAL AÑADIDA ***
     {
         name: "youtube",
-        url: "https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282017%29.png", // URL del logo de YouTube
-        user: "MiCanalGenialYT" // Tu nombre de usuario o canal de YouTube
+        url: "https://goodly.co.in/wp-content/uploads/2023/10/youtube-logo-png-46016-1.png", // URL del logo de YouTube
+        user: "MakacaGotica" // Tu nombre de usuario o canal de YouTube
     }
 ];
 
