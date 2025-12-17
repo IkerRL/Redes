@@ -10,80 +10,46 @@ body {
     height: 100vh;
     background: #0f0019; /* Fondo oscuro púrpura */
     font-family: "Rajdhani", sans-serif;
-    text-transform: uppercase;
 }
 
-/* Contenedor del Panel (Estilo Futurista Exterior) */
+/* Contenedor del Panel (Estilo Futurista) */
 .social-panel {
-    /* Hacemos el panel RELATIVO para que el marco interior se posicione */
-    position: relative; 
-    
-    width: 250px; /* Incrementamos el ancho para que quepa todo como en la imagen */
+    width: 190px;
     padding: 14px 20px;
     background: rgba(15, 0, 25, 0.9);
-    
-    /* Borde Exterior */
-    border: 2px solid #8b5cf6; /* Tu color de borde */
+    border: 2px solid #8b5cf6; 
     clip-path: polygon(0 0, 96% 0, 100% 15%, 100% 100%, 4% 100%, 0 85%);
     box-shadow: 0 0 20px rgba(160, 50, 255, 0.4);
-    
-    /* Disposición Horizontal */
     display: flex;
     align-items: center;
     gap: 12px;
-    
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
 }
 
-/* ---------------------------------------------------- */
-/* CAMBIO CLAVE: Marco Interior Angulado (::after) */
-/* ---------------------------------------------------- */
-.social-panel::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    pointer-events: none; /* Asegura que se pueda hacer clic en el panel */
-    
-    /* Segundo Borde Interior */
-    border: 1px solid rgba(139, 92, 246, 0.7); /* Borde más delgado y menos opaco */
-    
-    /* Aplicamos el mismo clip-path, pero ajustado para el interior */
-    clip-path: polygon(0 0, 96% 0, 100% 15%, 100% 100%, 4% 100%, 0 85%);
-    
-    /* Añadimos un pequeño brillo interior */
-    box-shadow: inset 0 0 5px rgba(160, 50, 255, 0.2);
-}
-
-
-/* Contenedor del Icono (Hacemos el logo más grande) */
+/* Contenedor del Icono */
 .social-icon {
-    width: 42px; /* Un poco más grande para el estilo de la imagen */
-    height: 42px;
+    width: 36px;
+    height: 36px;
     border-radius: 6px;
-    /* Fondo transparente, solo para el icono */
-    background: transparent; 
+    background: linear-gradient(180deg, rgba(60, 0, 90, 0.35), rgba(40, 0, 70, 0.35));
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
+    flex-shrink: 0; 
 }
 
 /* Estilo para la imagen inyectada (Logo) */
 .social-icon img {
-    width: 40px; 
-    height: 40px;
-    object-fit: contain;
+    width: 35px; /* Tamaño del logo dentro del contenedor */
+    height: 48px;
+    object-fit: contain; /* Asegura que la imagen se vea bien sin estirarse */
+    /* *** LÍNEA ELIMINADA: filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.5)); *** */
 }
 
-/* Estilo del Nombre de Usuario (Más grande y brillante) */
+/* Estilo del Nombre de Usuario */
 .social-user {
-    font-size: 24px; /* Hacemos el texto más grande */
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     color: #ffffff;
-    /* Tu sombra neón original, con mayor fuerza */
-    text-shadow: 0 0 12px rgba(180, 100, 255, 1);
+    text-shadow: 0 0 10px rgba(150, 80, 255, 0.9);
+    text-transform: uppercase;
 }
