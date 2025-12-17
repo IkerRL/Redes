@@ -18,7 +18,7 @@ body {
     padding: 14px 20px;
     background: rgba(15, 0, 25, 0.9);
     border: 2px solid #8b5cf6; 
-    /* Estilo Angular */
+    /* Estilo Angular (Clip-Path) */
     clip-path: polygon(0 0, 96% 0, 100% 15%, 100% 100%, 4% 100%, 0 85%);
     box-shadow: 0 0 20px rgba(160, 50, 255, 0.4);
     display: flex;
@@ -40,8 +40,7 @@ body {
 
 /* Estilo para la imagen inyectada (Logo) */
 .social-icon img {
-    /* CORRECCIÓN: Ajustamos el tamaño para que encaje bien en 36x36px */
-    width: 30px; 
+    width: 30px; /* Tamaño del logo dentro del contenedor */
     height: 30px;
     object-fit: contain;
 }
