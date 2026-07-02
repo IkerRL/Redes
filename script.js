@@ -15,7 +15,12 @@ const socialData = [
         name: "youtube",
         url: "https://goodly.co.in/wp-content/uploads/2023/10/youtube-logo-png-46016-1.png", // URL del logo de YouTube
         user: "MakacaGotica" // Tu nombre de usuario o canal de YouTube
-    }
+    },
+        {
+        name: "Horus X",
+        url: "horus x falcon head_white.png",
+        user: "Horus X"
+    },
 ];
 
 const iconBox = document.querySelector(".social-icon");
